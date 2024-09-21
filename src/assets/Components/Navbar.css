@@ -1,0 +1,84 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0; 
+    background-color: #000000;
+    overflow: hidden;
+    border-bottom: 1.5px solid white;
+    z-index: 1000;
+}
+
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 208, 0, 0.5), rgba(112, 3, 255, 0.747));
+    background-size: 200% 200%;
+    animation: fadeMoveBackground 5s ease infinite;
+    z-index: 0; 
+}
+
+
+@keyframes fadeMoveBackground {
+    0% {
+        background-position: 0% 0%;
+        opacity: 1;
+    }
+    50% {
+        background-position: 100% 100%;
+        opacity: 0.5;
+    }
+    100% {
+        background-position: 0% 0%;
+        opacity: 1;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+.logo-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 170px; 
+}
+
+.HOME, .TOKENOMICS, .HOWTOBUY, .ABOUT, .COMMUNITY {
+    color: rgb(255, 255, 255); 
+    font-size: 15px;
+    padding: 15px; 
+    border-radius: 10px;
+    margin-right: 50px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.ABOUT:hover, .TOKENOMICS:hover, .HOME:hover, .COMMUNITY:hover, .HOWTOBUY:hover {
+    color: rgb(255, 217, 0); 
+    transform: scale(1.1);
+}
+
+.ppfoto{
+    border: solid white 1px;
+    position: absolute;
+    height: 45px;
+    width: 50px;
+    margin-left: -900px;
+    border-radius: 2px;
+}

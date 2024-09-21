@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body {
+  cursor: url('/rocketmousecursor.png') auto; /* Substitua a URL pela sua imagem */
+}
